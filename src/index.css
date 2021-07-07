@@ -1,13 +1,201 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  background-color: aliceblue;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tableHeader {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  margin-bottom: 5px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ddfaf7;
+  border-bottom: 1px solid green;
+  box-shadow: 0 3px 5px 2px rgba(26, 17, 19, 0.3);
+}
+
+.inputCount {
+  margin: 20px;
+}
+
+.usersTable {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid green;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: rgba(163, 229, 176, 0.27);
+  align-items: center;
+}
+
+/*user*/
+
+.fullname {
+  border: 1px solid green;
+  width: 300px;
+  padding-left: 5px;
+  font-size: 1.2em;
+}
+
+.gender {
+  border: 1px solid green;
+  width: 50px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.email {
+  border: 1px solid green;
+  width: 350px;
+  padding-left: 5px;
+  font-size: 1.2em;
+}
+
+.userName,
+.userGender,
+.userEmail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nameText,
+.genderText,
+.emailText {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profile:hover {
+  cursor: pointer;
+  color: rgb(47, 79, 250);
+}
+
+/*userCardCss*/
+.userDopInfo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userAddress {
+  margin-left: 10px;
+}
+
+
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+  .moduleUsers {
+    padding: 10px;
+  }
+
+  .tableHeader {
+    color: cadetblue;
+  }
+
+  .usersTable {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  /*user*/
+
+  .fullname {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .gender {
+    width: 100%;
+    padding-left: 5px;
+    text-align: start;
+    margin-bottom: 3px;
+  }
+
+  .email {
+    width: 100%;
+  }
+
+  .nameText,
+  .genderText,
+  .emailText {
+    width: 70px;
+  }
+
+  .filters {
+    display: block;
+  }
+}
+
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media only screen and (min-width: 479px) and (max-width: 1024px) {
+  .moduleUsers {
+    padding: 10px;
+  }
+
+  .tableHeader {
+    color: cadetblue;
+  }
+
+  .usersTable {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  /*user*/
+
+  .fullname {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .gender {
+    width: 100%;
+    padding-left: 5px;
+    text-align: start;
+    margin-bottom: 3px;
+  }
+
+  .email {
+    width: 100%;
+  }
+
+  .nameText,
+  .genderText,
+  .emailText {
+    width: 70px;
+  }
 }

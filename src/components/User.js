@@ -1,8 +1,7 @@
 import Button from "@material-ui/core/Button";
 import { useDispatch } from "react-redux";
 import { deleteUser } from "../redux/ducks/users";
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
-import CustomizedDialogs from './UserCard'
+import CustomizedDialogs from "./UserCard";
 
 function User({ user }) {
   const dispatch = useDispatch();
@@ -34,8 +33,8 @@ function User({ user }) {
         <div className="emailText">email:</div>
         <div className="email">{user.email}</div>
       </div>
-      <div className='profile'>
-        <CustomizedDialogs user={user}/>
+      <div className="profile">
+        <CustomizedDialogs user={user} />
       </div>
       <Button
         onClick={handleDelete}

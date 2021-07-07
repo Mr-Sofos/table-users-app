@@ -1,7 +1,7 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
-import { useDispatch, useSelector } from 'react-redux'
-import { getValue } from '../redux/ducks/users'
+import { useDispatch, useSelector } from "react-redux";
+import { getValue } from "../redux/ducks/users";
 
 function InputCount() {
   const dispatch = useDispatch();

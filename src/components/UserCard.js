@@ -1,4 +1,3 @@
-import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -8,7 +7,8 @@ import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import AccountBoxIcon from '@material-ui/icons/AccountBox'
+import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import { useState } from "react";
 
 const styles = (theme) => ({
   root: {
@@ -55,7 +55,7 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 export default function CustomizedDialogs({ user }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -67,7 +67,7 @@ export default function CustomizedDialogs({ user }) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        <AccountBoxIcon fontSize={'large'} />
+        <AccountBoxIcon fontSize={"large"} />
       </Button>
       <Dialog
         onClose={handleClose}
@@ -79,11 +79,11 @@ export default function CustomizedDialogs({ user }) {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            <div className='userDopInfo'>
-              <div className='userImage'>
-                <img src={user.picture.large} alt={'#!'}/>
+            <div className="userDopInfo">
+              <div className="userImage">
+                <img src={user.picture.large} alt={"#!"} />
               </div>
-              <div className='userAddress'>
+              <div className="userAddress">
                 <div>Phone: {user.phone}</div>
                 <div>City: {user.location.city}</div>
                 <div>Street: {user.location.street.name}</div>
